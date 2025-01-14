@@ -13,11 +13,17 @@ def load_data():
     return df
 df = load_data()
 
-# Show a multiselect widget with the genres using `st.multiselect`.
+col1, col2, col3 = st.columns(3)
+with col1:
 medicos = st.multiselect(
     "Médicos",
     ["Fernandez", "Aguilella", "Revert"]
 )
+
+with col2:
+st.text('Hola')
+
+with col3:
 
 st.write("You selected:", medicos)
 
