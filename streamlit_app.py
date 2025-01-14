@@ -15,21 +15,21 @@ df = load_data()
 
 col1, col2, col3 = st.columns(3)
 with col1:
-medicos = st.multiselect(
-    "Médicos",
-    ["Fernandez", "Aguilella", "Revert"]
-)
-st.write("You selected:", medicos)
+    medicos = st.multiselect(
+        "Médicos",
+        ["Fernandez", "Aguilella", "Revert"]
+    )
+    st.write("You selected:", medicos)
 
 with col2:
-st.text('Hola')
+    st.text('Hola')
 
 with col3:
-# Filter the dataframe based on the widget input and reshape it.
-#df_filtered = df[(df["Medico"].isin(medico))]
-
-# Display the data as a table using `st.dataframe`.
-st.dataframe(
-    df,
-    use_container_width=True,
-)
+    # Filter the dataframe based on the widget input and reshape it.
+    #df_filtered = df[(df["Medico"].isin(medico))]
+    
+    # Display the data as a table using `st.dataframe`.
+    st.dataframe(
+        df,
+        use_container_width=True,
+    )
