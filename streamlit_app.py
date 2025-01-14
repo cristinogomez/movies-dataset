@@ -1,4 +1,4 @@
-icoimport pandas as pd
+import pandas as pd
 import streamlit as st
 
 # Show the page title and description.
