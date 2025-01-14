@@ -35,7 +35,6 @@ with col3:
     
     # Display the data as a table using `st.dataframe`.
     st.dataframe(
-        df,
-        use_container_width=True,
+        df
     )
     edited_df = st.data_editor(df, num_rows="dynamic")
