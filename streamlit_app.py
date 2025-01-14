@@ -41,3 +41,5 @@ with col3:
         boton_guardar:st.form_submit_button('Save')
     if boton_guardar:
         save_data()
+    else
+        st.write('error')
