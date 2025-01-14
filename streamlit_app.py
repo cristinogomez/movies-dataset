@@ -19,14 +19,12 @@ medicos = st.multiselect(
     "Médicos",
     ["Fernandez", "Aguilella", "Revert"]
 )
+st.write("You selected:", medicos)
 
 with col2:
 st.text('Hola')
 
 with col3:
-
-st.write("You selected:", medicos)
-
 # Filter the dataframe based on the widget input and reshape it.
 #df_filtered = df[(df["Medico"].isin(medico))]
 
