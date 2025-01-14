@@ -40,3 +40,5 @@ with col3:
                 st.write("Edited dataframe:", edited_df)
                 edited_df.to_csv("data/bloqueos.csv",index=False)
 
+suma=edited_df['cantidad'].sum()
+                st.text(suma)
