@@ -27,7 +27,7 @@ with col2:
     ("Aguilella", "Fernandez", "Villar"),
 )
 
-st.write("You selected:", medico)
+    st.write("Tu selección:", medico)
 
 with col3:
     # Filter the dataframe based on the widget input and reshape it.
