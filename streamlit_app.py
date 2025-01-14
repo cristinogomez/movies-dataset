@@ -37,8 +37,9 @@ with col3:
             edited_df = st.data_editor(df, num_rows='dynamic',use_container_width=True,hide_index=True)
             boton_guardar=st.form_submit_button('Save')
             if boton_guardar:
-                st.write("Edited dataframe:", edited_df)
-                edited_df.to_csv("data/bloqueos.csv", index=False)
+                with open('bloqueos.csv', mode='w') as file
+                    st.write("Edited dataframe:", edited_df)
+                    edited_df.to_csv(file, index=False)
                 
                 suma=edited_df['Cantidad'].sum()
                 st.write(suma)
