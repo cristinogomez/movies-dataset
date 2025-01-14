@@ -38,7 +38,7 @@ with col3:
             boton_guardar=st.form_submit_button('Save')
             if boton_guardar:
                 st.write("Edited dataframe:", edited_df)
-                edited_df.to_csv("data/prueba.csv",index=False,date_format='%m/%d/%Y')
+                edited_df.to_csv("prueba.csv",index=False,date_format='%m/%d/%Y')
 
             suma=edited_df['Cantidad'].sum()
             st.write(suma)
