@@ -35,7 +35,7 @@ with col2:
 with col3:
     with st.form("my_form"):
         if 'df' not in st.session_state:
-            st.session_state.df = pd.DataFrame(data=pd.read_csv("data/bloqueos.csv"))
+            st.session_state.df = pd.DataFrame(df)
             edited_df = st.data_editor(st.session_state.df, use_container_width=True, hide_index=True)
             #edited_df = st.data_editor(df, num_rows="dynamic",use_container_width=True)
             boton_guardar=st.form_submit_button('Save')
