@@ -39,6 +39,7 @@ with col3:
             if boton_guardar:
                 st.write("Edited dataframe:", edited_df)
                 edited_df.to_csv("data/bloqueos.csv", index=False)
+                df.append(edited_df)
                 
         #suma=edited_df['Cantidad'].sum()
         #st.write(suma)
