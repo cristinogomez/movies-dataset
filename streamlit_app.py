@@ -1,4 +1,4 @@
-import pandas as pd
+tedimport pandas as pd
 import streamlit as st
 
 # Show the page title and description.
@@ -37,5 +37,5 @@ with col3:
         edited_df = st.data_editor(df, num_rows="dynamic",use_container_width=True)
         boton_guardar=st.form_submit_button('Save')
         if boton_guardar:
-              df.to_csv('data/bloqueos.csv',index=False)
+              edited_df.to_csv('data/bloqueos.csv',index=False)
 
