@@ -38,3 +38,4 @@ with col3:
         df,
         use_container_width=True,
     )
+    edited_df = st.data_editor(df, num_rows="dynamic")
