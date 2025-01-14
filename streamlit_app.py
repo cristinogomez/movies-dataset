@@ -14,7 +14,7 @@ def load_data():
 df = load_data()
 
 def save_data():
-    df_saved=pd.to_csv('data/bloqueos.csv')
+    df_saved=pd.to_csv('data/bloqueos.csv',index=False)
     return df_saved
 
 col1, col2, col3 = st.columns(3)
