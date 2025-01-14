@@ -34,11 +34,9 @@ with col2:
 
 with col3:
     with st.form("my_form"):
-        if 'df' not in st.session_state:
-            st.session_state.df = pd.DataFrame(df)
-            edited_df = st.data_editor(st.session_state.df, use_container_width=True, hide_index=True)
-            #edited_df = st.data_editor(df, num_rows="dynamic",use_container_width=True)
+            edited_df = st.data_editor(df, num_rows="dynamic",use_container_width=True)
             boton_guardar=st.form_submit_button('Save')
             if boton_guardar:
-                 edited_df.to_csv("data/bloqueos.csv", index=False)
+                st.write("Edited dataframe:", edited_df)
+                #edited_df.to_csv("data/bloqueos.csv", index=False)
 
