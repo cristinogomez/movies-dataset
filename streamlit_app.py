@@ -22,7 +22,12 @@ with col1:
     st.write("You selected:", medicos)
 
 with col2:
-    st.text('Hola')
+    medico = st.selectbox(
+    "Médicos",
+    ("Aguilella", "Fernandez", "Villar"),
+)
+
+st.write("You selected:", medico)
 
 with col3:
     # Filter the dataframe based on the widget input and reshape it.
