@@ -38,8 +38,7 @@ with col2:
 with col3:
     with st.form("my_form"):
         edited_df = st.data_editor(df, num_rows="dynamic",use_container_width=True)
-        boton_guardar:st.form_submit_button('Save')
+        boton_guardar=st.form_submit_button('Save')
         if boton_guardar:
             save_data()
-        else
-            st.write('error')
+
