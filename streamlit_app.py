@@ -39,7 +39,6 @@ with col3:
             if boton_guardar:
                 st.write("Edited dataframe:", edited_df)
                 edited_df.to_csv("data/bloqueos.csv", index=False)
-                df.append({'Fecha':13/02/2023,'Medico':'Fernandez','Cantidad':5})
                 
-        #suma=edited_df['Cantidad'].sum()
-        #st.write(suma)
+        suma=edited_df['Cantidad'].sum()
+        st.write(suma)
