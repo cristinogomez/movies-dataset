@@ -38,5 +38,5 @@ with col3:
             boton_guardar=st.form_submit_button('Save')
             if boton_guardar:
                 st.write("Edited dataframe:", edited_df)
-                #edited_df.to_csv("data/bloqueos.csv", index=False)
+                edited_df.to_csv("data/bloqueos.csv")
 
