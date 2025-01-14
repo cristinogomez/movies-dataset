@@ -33,8 +33,4 @@ with col3:
     # Filter the dataframe based on the widget input and reshape it.
     #df_filtered = df[(df["Medico"].isin(medico))]
     
-    # Display the data as a table using `st.dataframe`.
-    st.dataframe(
-        df
-    )
     edited_df = st.data_editor(df, num_rows="dynamic",use_container_width=True)
