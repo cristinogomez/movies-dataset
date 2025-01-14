@@ -13,7 +13,7 @@ def load_data():
     return df
 df = load_data()
 
-def save_data()
+def save_data():
     df_saved=pd.to_csv('data/bloqueos.csv')
     return df_saved
 
