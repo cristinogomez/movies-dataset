@@ -7,7 +7,7 @@ st.subheader("Agendas COT")
 
 # Load the data from a CSV. We're caching this so it doesn't reload every time the app
 # reruns (e.g. if the user interacts with the widgets).
-@st.cache_data(allow_output_mutation=True)
+#@st.cache_data(allow_output_mutation=True)
 def load_data():
     df = pd.read_csv("data/bloqueos.csv")
     return df
@@ -34,11 +34,15 @@ with col2:
 
 with col3:
     with st.form("my_form"):
-            edited_df = st.data_editor(df, num_rows="dynamic",use_container_width=True)
+            if 'df' not in st.session_state:
+            st.session_state.df = pd.DataFrame(data=pd.read_csv("data/bloqueos.csv"))
+
+            edited_df = st.data_editor(st.session_state.df, use_container_width=True, hide_index=True)
+
+
             boton_guardar=st.form_submit_button('Save')
             if boton_guardar:
                 st.write("Edited dataframe:", edited_df)
-                edited_df.to_csv("prueba.csv",index=False,date_format='%m/%d/%Y')
-
+                edited_df.to_csv("data/data.csv", index=False)
             suma=edited_df['Cantidad'].sum()
             st.write(suma)
