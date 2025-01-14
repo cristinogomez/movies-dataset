@@ -1,4 +1,4 @@
-import pandas as pd
+icoimport pandas as pd
 import streamlit as st
 
 # Show the page title and description.
@@ -19,7 +19,7 @@ medicos = st.multiselect(
     ["Fernandez", "Aguilella", "Revert"]
 )
 
-st.write("You selected:", options)
+st.write("You selected:", medicos)
 
 # Filter the dataframe based on the widget input and reshape it.
 #df_filtered = df[(df["Medico"].isin(medico))]
