@@ -14,17 +14,16 @@ def load_data():
 df = load_data()
 
 # Show a multiselect widget with the genres using `st.multiselect`.
-medicos = st.multiselect(
-    "Medico",
-    df.Medico.unique(),
-    ["Fernandez", "Aguilella"],
-)
+#medicos = st.multiselect(
+   # "Medico",
+   # df.Medico.unique(),
+    #["Fernandez", "Aguilella"],)
 
 # Filter the dataframe based on the widget input and reshape it.
-df_filtered = df[(df["Medico"].isin(medico))]
+#df_filtered = df[(df["Medico"].isin(medico))]
 
 # Display the data as a table using `st.dataframe`.
 st.dataframe(
-    df_filteres,
+    df,
     use_container_width=True,
 )
