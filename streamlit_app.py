@@ -13,6 +13,10 @@ def load_data():
     return df
 df = load_data()
 
+def save_data()
+    df_saved=pd.to_csv('data/bloqueos.csv')
+    return df_saved
+
 col1, col2, col3 = st.columns(3)
 with col1:
     container = st.container(border=True)
@@ -32,7 +36,8 @@ with col2:
     st.write("Tu selección:", medico)
 
 with col3:
-    # Filter the dataframe based on the widget input and reshape it.
-    #df_filtered = df[(df["Medico"].isin(medico))]
-    
-    edited_df = st.data_editor(df, num_rows="dynamic",use_container_width=True)
+    with st.form("my_form"):
+        edited_df = st.data_editor(df, num_rows="dynamic",use_container_width=True)
+        boton_guardar:st.form_submit_button('Save')
+    if boton_guardar:
+        pass
