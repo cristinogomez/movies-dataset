@@ -15,11 +15,13 @@ df = load_data()
 
 col1, col2, col3 = st.columns(3)
 with col1:
-    medicos = st.multiselect(
-        "Médicos",
-        ["Fernandez", "Aguilella", "Revert"]
-    )
-    st.write("You selected:", medicos)
+    container = st.container(border=True)
+    with container:
+        medicos = st.multiselect(
+            "Médicos",
+            ["Fernandez", "Aguilella", "Revert"]
+        )
+        st.write("You selected:", medicos)
 
 with col2:
     medico = st.selectbox(
