@@ -37,7 +37,7 @@ with col3:
             edited_df = st.data_editor(df, num_rows='dynamic',use_container_width=True,hide_index=True)
             boton_guardar=st.form_submit_button('Save')
             if boton_guardar:
-                with open('data/bloqueos.csv', mode='w') as file
+                with open('data/bloqueos.csv', mode='w') as file :
                     st.write("Edited dataframe:", edited_df)
                     edited_df.to_csv(file, index=False)
                 
