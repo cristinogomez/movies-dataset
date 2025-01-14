@@ -37,4 +37,4 @@ with col3:
     st.dataframe(
         df
     )
-    edited_df = st.data_editor(df, num_rows="dynamic")
+    edited_df = st.data_editor(df, num_rows="dynamic",use_container_width=True)
