@@ -13,9 +13,6 @@ def load_data():
     return df
 df = load_data()
 
-def save_data():
-    df_saved=pd.to_csv('data/bloqueos.csv',index=False)
-    return df_saved
 
 col1, col2, col3 = st.columns(3)
 with col1:
@@ -40,5 +37,5 @@ with col3:
         edited_df = st.data_editor(df, num_rows="dynamic",use_container_width=True)
         boton_guardar=st.form_submit_button('Save')
         if boton_guardar:
-            save_data()
+                pd.to_csv('data/bloqueos.csv',index=False)
 
