@@ -9,7 +9,7 @@ st.subheader("Bloqueos ACV")
 # reruns (e.g. if the user interacts with the widgets).
 @st.cache_data()
 def load_data():
-    df = pd.read_csv("data/bloqueos.csv")
+    df = pd.read_excel("data/ACV.xls")
     return df
 df = load_data()
 
