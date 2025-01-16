@@ -10,7 +10,7 @@ st.subheader("Bloqueos ACV")
 # reruns (e.g. if the user interacts with the widgets).
 @st.cache_data()
 def load_data():
-    df = pd.read_excel("data/ACV.xls")
+    df = pd.read_csv("data/ACV.csv")
     return df
 df = load_data()
 
@@ -38,8 +38,8 @@ with col3:
             edited_df = st.data_editor(df, num_rows='dynamic',use_container_width=True,hide_index=True)
             boton_guardar=st.form_submit_button('Save')
             if boton_guardar:
-                with open('data/ACV.xls', mode='w') as file :
+                with open('data/ACV.csv', mode='w') as file :
                     st.write("Edited dataframe:", edited_df)
-                    edited_df.to_excel(file, index=False)
+                    edited_df.to_csv(file, index=False)
                 
 
