@@ -14,7 +14,7 @@ def load_data():
 df = load_data()
 
 
-col1, col2, col3 = st.columns(3)
+col1, col2 = st.columns(2)
 with col1:
     container = st.container(border=True)
     with container:
@@ -25,14 +25,6 @@ with col1:
         st.write("You selected:", medicos)
 
 with col2:
-    medico = st.selectbox(
-    "Médicos",
-    ("Aguilella", "Fernandez", "Villar"),
-)
-
-    st.write("Tu selección:", medico)
-
-with col3:
     with st.form("my_form"):
             edited_df = st.data_editor(df, num_rows='dynamic',use_container_width=True,hide_index=True)
             boton_guardar=st.form_submit_button('Save')
