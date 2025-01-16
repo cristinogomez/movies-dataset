@@ -1,5 +1,4 @@
 import pandas as pd
-import openpyxl
 import streamlit as st
 
 # Show the page title and description.
