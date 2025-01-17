@@ -29,11 +29,12 @@ with col2:
             edited_df = st.data_editor(df, num_rows='dynamic',use_container_width=True,hide_index=True)
             boton_guardar=st.form_submit_button('Save')
             if boton_guardar:
-                with open('data/ACV.csv', mode='w') as file :
-                    df1 = pd.DataFrame({'name': ['Raphael', 'Donatello'],
+                df1 = pd.DataFrame({'name': ['Raphael', 'Donatello'],
                                         'mask': ['red', 'purple'],
                                         'weapon': ['sai', 'bo staff']})
-                    df1.to_csv('out.csv', index=False)  
+                df1.to_csv('out.csv', index=False) 
+                with open('data/ACV.csv', mode='w') as file :
+                     
                     st.write("Edited dataframe:", edited_df)
                     edited_df.to_csv(file, index=False)
                 
