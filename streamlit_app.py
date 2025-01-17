@@ -37,6 +37,6 @@ with col2:
                 with open('data/ACV.csv', mode='w') as file :
                      
                     st.write("Edited dataframe:", df2)
-                    df2.to_csv(file, index=False)
+                    df2.to_csv(file, index=True)
                 
 
