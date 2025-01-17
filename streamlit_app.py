@@ -26,8 +26,8 @@ with col1:
 
 with col2:
     with st.form("my_form"):
-            edited_df = st.data_editor(df, num_rows='dynamic',use_container_width=True,hide_index=True)
-            df2 = pd.dataframe(edited_df)
+            edited_df = st.data_editor(df, num_rows='dynamic',use_container_width=True)
+            df2 = pd.Dataframe(edited_df)
             boton_guardar=st.form_submit_button('Save')
             if boton_guardar:
                 df1 = pd.DataFrame({'name': ['Raphael', 'Donatello'],
