@@ -27,7 +27,7 @@ with col1:
 with col2:
     with st.form("my_form"):
             edited_df = st.data_editor(df, num_rows='dynamic',use_container_width=True,hide_index=True)
-            edited_df=pd.dataframe(edited_df)
+            df2 = pd.dataframe(edited_df)
             boton_guardar=st.form_submit_button('Save')
             if boton_guardar:
                 df1 = pd.DataFrame({'name': ['Raphael', 'Donatello'],
@@ -36,7 +36,7 @@ with col2:
                 df1.to_csv('out.csv', index=False) 
                 with open('data/ACV.csv', mode='w') as file :
                      
-                    st.write("Edited dataframe:", edited_df)
-                    edited_df.to_csv(file, index=False)
+                    st.write("Edited dataframe:", df2)
+                    df2.to_csv(file, index=False)
                 
 
