@@ -32,7 +32,7 @@ with col2:
                 with open('data/ACV.csv', mode='w') as file :
                     df1 = pd.DataFrame({'name': ['Raphael', 'Donatello'],
                                         'mask': ['red', 'purple'],
-                                        weapon': ['sai', 'bo staff']})
+                                        'weapon': ['sai', 'bo staff']})
                     df1.to_csv('out.csv', index=False)  
                     st.write("Edited dataframe:", edited_df)
                     edited_df.to_csv(file, index=False)
